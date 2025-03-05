@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background-light: #ffffff;
+  --foreground-light: #171717;
+  --background-dark: #0a0a0a;
+  --foreground-dark: #ededed;
+
+  --color-background: var(--background-light);
+  --color-foreground: var(--foreground-light);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --modal-background: var(--background-dark);
+  --modal-foreground: var(--foreground-dark);
+}
+
+.dark {
+  --color-background: var(--background-dark);
+  --color-foreground: var(--foreground-dark);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
